@@ -14,7 +14,7 @@ const randomFloat = require('./useCases/randomFloat');
 app.get('/api/v1/number', (req, res) =>{
   const value = randomFloat.randomFloat();
 
-  res.json({value});
+  res.json({value, port: PORT});
 });
 
 app.listen(PORT, () =>{
